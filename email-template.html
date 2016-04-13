@@ -1,0 +1,689 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Backorder</title>
+    <meta name="viewport" content="width=devide-width, initial-scale=1" />
+    <meta http-equiv="X-UA-compatible" content="IE=edge" />
+    <style>
+      @font-face {
+        font-family: 'XFINITYSans';
+        src: url('https://s3.amazonaws.com/modesto-emails/fonts/XFINITYSans-Reg.eot'); /* IE9 Compat Modes */
+        src: url('https://s3.amazonaws.com/modesto-emails/fonts/XFINITYSans-Reg.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('https://s3.amazonaws.com/modesto-emails/fonts/XFINITYSans-Reg.woff2') format('woff2'), /* Super Modern Browsers */
+        url('https://s3.amazonaws.com/modesto-emails/fonts/XFINITYSans-Reg.woff') format('woff'), /* Pretty Modern Browsers */
+        url('https://s3.amazonaws.com/modesto-emails/fonts/XFINITYSans-Reg.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('https://s3.amazonaws.com/modesto-emails/fonts/XFINITYSans-Reg.svg#svgFontName') format('svg'); /* Legacy iOS */
+        font-weight: 200;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'XFINITYSans';
+        src: url('https://s3.amazonaws.com/modesto-emails/fonts/XFINITYSans-Thin.eot'); /* IE9 Compat Modes */
+        src: url('https://s3.amazonaws.com/modesto-emails/fonts/XFINITYSans-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('https://s3.amazonaws.com/modesto-emails/fonts/XFINITYSans-Thin.woff2') format('woff2'), /* Super Modern Browsers */
+        url('https://s3.amazonaws.com/modesto-emails/fonts/XFINITYSans-Thin.woff') format('woff'), /* Pretty Modern Browsers */
+        url('https://s3.amazonaws.com/modesto-emails/fonts/XFINITYSans-Thin.ttf')  format('truetype'), /* Safari, Android, iOS */
+        url('https://s3.amazonaws.com/modesto-emails/fonts/XFINITYSans-Thin.svg#svgFontName') format('svg'); /* Legacy iOS */
+        font-weight: 100;
+        font-style: normal;
+      }
+
+      /* Client-specific styles */
+      .ExternalClass * {
+        line-height: 100%
+      }
+
+      .ExternalClass {
+        width: 100%;
+      }
+
+      .ReadMsgBody {
+        width: 100%;
+      }
+
+      #outlook a {
+        padding: 0;
+      }
+
+      .ignore-address, .apple-link a {
+        text-decoration: none !important;
+        color: inherit !important;
+        text-align: inherit !important;
+      }
+
+      table, td {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      /* Reset-specific styles */
+      body, table, td, tr, a {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        -mso-line-height-rule: exactly;
+        font-family: 'XFINITYSans', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+      }
+
+      img {
+        -ms-interpolation-mode: bicubic;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+      }
+
+
+      /* Template Styles */
+      .content-wrapper {
+        min-width: 44ch !important;
+      }
+
+      .product-status {
+        font-size: 10px !important;
+      }
+
+      span.footer-span:first-of-type {
+        margin-right: 0.8em;
+      }
+
+      @media screen and (min-width: 601px) {
+        .container {
+          width: 600px !important;
+        }
+
+
+      }
+
+      @media screen and (max-width: 600px) {
+        .background-container {
+          padding: 18px !important;
+        }
+
+        .primary-content-wrapper {
+          padding: 18px !important;
+
+        }
+
+        .content-container {
+          min-width: 359px !important;
+        }
+
+        .paragraph-copy {
+          padding-right: 18px !important;
+          padding-left: 18px !important;
+        }
+
+        .copy-after-button {
+          padding-top: 0px !important;
+        }
+
+
+      }
+
+      @media screen and (max-width: 400px) {
+        .background-container {
+          padding: 9px !important;
+        }
+
+        .headline {
+          font-size: 24px !important;
+        }
+
+        .product-pricing {
+          font-size: 10px !important;
+        }
+
+      }
+
+      /* Webkit specific features; 0 targts all */
+      @media screen and (-webkit-min-device-pixel-ratio: 0) {
+        .dots {
+          background-image: url(https://s3.amazonaws.com/modesto-emails/dots_long_tall.png);
+          background-repeat: repeat-x;
+          background-size: 720px 10px;
+          height: 10px !important;
+          background-position: center bottom;
+          border-bottom: none !important;
+
+        }
+
+        .dots--small {
+          background-image: url(https://s3.amazonaws.com/modesto-emails/dots_small_tall.png);
+          background-repeat: repeat-x;
+          background-size: 600px 10px;
+          height: 10px !important;
+          background-position: center bottom;
+          border-bottom: none !important;
+        }
+
+        .padding-for-dots {
+          padding-top: 10px;
+        }
+
+        .padding-for-dots2 {
+          padding-top: 40px !important;
+        }
+      }
+    </style>
+    <!--[if mso]>
+    <style>
+      body, td, table, a {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+      }
+    </style>
+    <![endif]-->
+  </head>
+  <body>
+    <!--PREHEADER TEXT  -->
+    <div style="display: none; font-size: 0px; line-height: 0px; max-height: 0px; max-width: 0; opacity: 0; overflow: hidden;">
+      To be Determined
+    </div>
+
+    <table align="center" class="" bgcolor="#ffffff"  border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:300px">
+      <tr>
+        <td align="center" style="padding: 10px 0; height: 64px;">
+          <img src="http://placehold.it/200x50?text=xFinity Logo" alt="xFinity Mobile" style="display: block;" border="0" width="200" />
+        </td>
+      </tr>
+    </table>
+    <!-- Start of New Component Module Module -->
+
+    <!--[if (gte mso 9)|(IE)]>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600">
+      <tr>
+        <td>
+          <![endif]-->
+          <!-- New Component Core Container -->
+          <table align="center" width="100%" cellspacing="0" cellpadding="0" style="table-layout: fixed;">
+            <tr>
+              <td align="center" class="background-container" bgcolor="#f2f2f2" style="padding: 36px;">
+                <!-- New Component Inner Content Container -->
+                <table align="center" class="content-container" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; min-width: 600px;" >
+                  <tr>
+                    <td bgcolor="#ffffff" style="color: #2e2e2e; border: 2px solid #e8e8e8; padding: 40px 0 0 0">
+                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding: 0 36px 0 36px">
+                              <tr>
+                                <td class="subheadline" style="font-size:  22px; font-style: normal; font-weight: 200; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 26px;" align="center">
+                                  Hi Riley,
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="headline" align="center" style="font-size: 42px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 100; color: #2b9cd8; padding-top: 19px">
+                                  Everything's In Order.
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding-top: 14px;" align="center">
+                            <div>
+                              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                  <td align="center">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="155">
+                                      <tr>
+                                        <td bgcolor="#ffffff"  style="padding: 10px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; border:1px solid #e5e5e5" align="center">
+                                          <a href="#" target="_blank" style="font-size: 12px; font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400;  text-decoration: none; display: inline-block; "><span style="color: #e5e5e5; text-transform: uppercase">Order # 11005566</span></a>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 0 32px 0 32px" class="primary-content-wrapper">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" >
+                              <tr>
+                                <td class="paragraph-copy copy-after-button" align="center" style="padding: 19px 72px 19px 72px; font-weight: normal; font-family: sans-serif; font-size: 12px; line-height: 18px; ">
+                                  We're prepping your order for shipment and in <span style="font-weight: bold; font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif;  font-style: normal; ">3 business days</span> you'll enjoy the benefits of XFINITY Mobile. Welcome!
+                                </td>
+                              </tr>
+                              <tr>
+                                <!-- Placeholer Dot Pattern till I replace with image version -->
+                                <td class="dots" style=" padding-top: 0px; border-bottom: 1px dotted;">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif;  font-style: normal; font-weight: 200;">
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr class="product">
+                                      <td class="product-image-container" valign="top" align="left" width="50" style="min-width: 50px; max-width: 13%; padding-top: 19px;">
+                                        <img class="product-image" src="https://s3.amazonaws.com/modesto-emails/phone-item-white.png" alt="Phone Model X12" style="display: block; height: auto !important;" border="0" width="50" />
+                                      </td>
+                                      <td valign="middle" colspan="2" align="left" style="text-align: left; padding-top: 19px; padding-left: 32px;" >
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" colspan="2" valign="middle">
+                                          <tr>
+                                            <td class="product-owner" valign="middle" align="left" style="text-align: left;">
+                                              Bart's
+                                            </td>
+                                          </tr>
+                                          <tr class="product-details-row">
+                                            <td class="product-name" valign="middle" align="left" style="text-align: left;font-size:10px; line-height: 15px; font-weight: normal; font-style: normal;">
+                                              iPhone 6s
+                                            </td>
+                                            <td class="product-pricing product-pricing--line1" valign="middle" style="font-size: 14px;" align="right">
+                                              $700.00
+                                            </td>
+                                          </tr>
+                                          <tr class="product-details-row">
+                                            <td class="product-name" style="font-size:10px; line-height: 15px; font-weight: normal; font-style: normal;">1 Phone Line</td>
+                                            <td class="product-pricing product-pricing--line2" colspan="2" align="right" style="font-size: 14px">
+                                              $20.00/mo.
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                    <tr class="product">
+                                      <td class="product-image-container" valign="top" align="left" width="50" style="min-width: 50px; max-width: 13%; padding-top: 19px;">
+                                        <img class="product-image" src="https://s3.amazonaws.com/modesto-emails/phone-item-white.png" alt="Phone Model X12" style="display: block; height: auto !important;" border="0" width="50" />
+                                      </td>
+                                      <td valign="middle" colspan="2" align="left" style="text-align: left; padding-top: 19px; padding-left: 32px;" >
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" colspan="2" valign="middle">
+                                          <tr>
+                                            <td class="product-owner" valign="middle" align="left" style="text-align: left;">
+                                              Gerald's
+                                            </td>
+                                          </tr>
+                                          <tr class="product-details-row">
+                                            <td class="product-name" valign="middle" align="left" style="text-align: left;font-size:10px; line-height: 15px; font-weight: normal; font-style: normal;">
+                                              iPhone 6s
+                                            </td>
+                                            <td class="product-pricing product-pricing--line1" valign="middle" style="font-size: 14px;" align="right">
+                                              $30.00/mo.
+                                            </td>
+                                          </tr>
+                                          <tr class="product-details-row">
+                                            <td class="product-name" style="font-size:10px; line-height: 15px; font-weight: normal; font-style: normal;">1 Phone Line</td>
+                                            <td class="product-pricing product-pricing--line2" colspan="2" align="right" style="font-size: 14px">
+                                              $20.00/mo.
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <!-- Placeholer Dot Pattern till I replace with image version -->
+                                      <td colspan="3" class="dots" style="padding-top: 19px; border-bottom: 1px dotted;">
+                                      </td>
+                                    </tr>
+                                    <tr class="product">
+                                      <td class="product-image-container" valign="top" align="left" width="50" style="min-width: 50px; max-width: 13%; padding-top: 19px;">
+                                        <img class="product-image" src="https://s3.amazonaws.com/modesto-emails/phone-item-image.png" alt="Phone Model X12" style="display: block; height: auto !important;" border="0" width="50" />
+                                      </td>
+                                      <td valign="middle" colspan="2" align="left" style="text-align: left; padding-top: 19px; padding-left: 32px;" >
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%" colspan="2" valign="middle">
+                                          <tr>
+                                            <td class="product-owner" valign="middle" align="left" style="text-align: left;">
+                                              Riley's
+                                            </td>
+                                          </tr>
+                                          <tr class="product-details-row">
+                                            <td class="product-name" valign="middle" align="left" style="text-align: left;font-size:10px; line-height: 15px; font-weight: normal; font-style: normal;">
+                                              Samsung Galaxy S6
+                                            </td>
+                                            <td class="product-pricing product-pricing--line1" valign="middle" style="font-size: 14px;" align="right">
+                                              $28.17/mo.
+                                            </td>
+                                          </tr>
+                                          <tr class="product-details-row">
+                                            <td class="product-name" style="font-size:10px; line-height: 15px; font-weight: normal; font-style: normal;">1 Phone Line</td>
+                                            <td class="product-pricing product-pricing--line2" colspan="2" align="right" style="font-size: 14px">
+                                              $0.00/mo.
+                                            </td>
+                                          </tr>
+                                          <tr class="product-details-row">
+                                            <td class="product-name" style="color: #8B8B8B; font-size:10px; line-height: 15px; font-weight: normal; font-style: normal;">Back-Order</td>
+                                            <td class="product-pricing product-pricing--line2" colspan="2" align="right" style="color: #8B8B8B; font-size: 10px;">
+                                              Ships on MM/DD/YYYY
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <!-- Placeholer Dot Pattern till I replace with image version -->
+                                <td class="dots" style="padding-top: 19px; border-bottom: 1px dotted;">
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td style="padding-top: 16px; font-size: 14px; font-style: normal; font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 200;" align="left">One-Time Charges Subtotal
+                                      </td>
+                                      <td align="right" style="font-size: 14px; font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 200; padding-top: 16px; ">
+                                        $700
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td style="padding-top: 16px; padding-bottom: 16px; font-size: 14px; font-style: normal; font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 200;" align="left">Monthly Charges Subtotal
+                                      </td>
+                                      <td align="right" style="font-size: 14px; font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 200; padding-top: 16px; padding-bottom: 16px;">
+                                        $92.87
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <!-- Post Subtotal Information -->
+                        <tr>
+                          <td>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td class="background-container" bgcolor="f8f8f8 " style="-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; border-top: none; padding: 20px 36px; color: #6e6d6d">
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td align="left" style="font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 200; line-height: 18px; font-size: 12px;">
+                                        Shipping
+                                      </td>
+                                      <td align="right" style="font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 200; line-height: 18px; font-size: 12px">
+                                        $0
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td align="left" style="font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 200; line-height: 18px; padding-top: 19px; font-size: 12px;">
+                                        Estimated Taxes and Other Charges
+                                      </td>
+                                      <td align="right" style="font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 200; line-height: 18px; padding-top: 19px; font-size: 12px;">
+                                        $19.92
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="dots" style="border-bottom: 1px dotted;" colspan="2">&nbsp;</td>
+                                    </tr>
+                                    <!-- Total -->
+                                    <tr>
+                                      <td align="left" style="font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 200; line-height: 20px; padding-top: 19px; font-size: 20px;">
+                                        Total
+                                      </td>
+                                      <td align="right" style="font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 200; line-height: 20px; padding-top: 19px; font-size: 20px;">
+                                        $812.79
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="dots padding-for-dots" style="border-bottom: 1px dotted;" colspan="2">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                      <td align="center" colspan="2">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                          <tr>
+                                            <td align="center" style="padding-top: 19px; font-size: 12px; font-style: normal; font-weight: 200; font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                                              Your card will be charged upon product shipment.
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!--[if (gte mso 9)|(IE)>
+        </td>
+      </tr>
+    </table>
+    <![endif]-->
+    <!-- Start of New Component Module Module -->
+    <!--[if (gte mso 9)|(IE)]>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600">
+      <tr>
+        <td>
+          <![endif]-->
+          <!-- New Component Core Container -->
+          <table align="center" width="100%" cellspacing="0" cellpadding="0" style="table-layout: fixed;">
+            <tr>
+              <td align="center" class="background-container" bgcolor="#f2f2f2" style="padding: 0 36px 0 36px;">
+                <!-- New Component Inner Content Container -->
+                <table align="center" class="content-container" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; min-width: 600px;" >
+                  <tr>
+                    <td bgcolor="#f8f8f8" style="color: #2e2e2e; border: 2px solid #e8e8e8; padding: 20px 36px 15px 36px">
+                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td valign="middle" style="padding-right: 10px; min-width: 19px;">
+                            <img src="https://s3.amazonaws.com/modesto-emails/receipt.png" alt="{alt}" style="display: block;" border="0" width="25" />
+                          </td>
+                          <td class="small-print" style="font-size: 11px; font-weight: normal; font-style: normal; font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 200;" valign="middle">
+                            P.S. The next billing cycle starts 6/1, and if you activate before that, we will prorate your bill.
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!--[if (gte mso 9)|(IE)]>
+        </td>
+      </tr>
+    </table>
+    <![endif]-->
+    <!-- Start of New Component Module Module -->
+    <!--[if (gte mso 9)|(IE)]>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600">
+      <tr>
+        <td>
+          <![endif]-->
+          <!-- New Component Core Container -->
+          <table align="center" width="100%" cellspacing="0" cellpadding="0" style="table-layout: fixed;">
+            <tr>
+              <td align="center" class="background-container" bgcolor="#f2f2f2" style="padding: 36px;">
+                <!-- New Component Inner Content Container -->
+                <table align="center" class="content-container" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; min-width: 600px;" >
+                  <tr>
+                    <td class="primary-content-wrapper" bgcolor="#f8f8f8 " style="border: 2px solid #e8e8e8; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px;  padding: 20px 36px; color: #6e6d6d ">
+                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <!-- Order Summary Part 2 -->
+                        <tr>
+                          <td>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tr>
+                                <td>
+                                  <tr>
+                                    <img src="https://s3.amazonaws.com/modesto-emails/shipping-truck.png" style="display: block;" border="0" width="19" />
+                                  </tr>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="padding-top: 11px; font-size: 20px; font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 200; font-style: normal;" align="left">
+                                  Here's where we're shipping:
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style="padding-top: 22px;" >
+                                  <table>
+                                    <tr>
+                                      <td style="font-size: 12px; line-height: 18px; font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: 200; font-weight: normal; color: #6e6d6d">
+                                        <span class="ignore-address">Riley Mendoza</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="font-size: 12px; line-height: 18px; font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: 200; font-weight: normal; color: #6e6d6d;">
+                                        <span class="ignore-address">29 York Rd</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="font-size: 12px; line-height: 18px; font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: 200; font-weight: normal; color: #6e6d6d;">
+                                        <span class="ignore-address">FL 32</span>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="font-size: 12px; line-height: 18px; font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: 200; font-weight: normal; color: #6e6d6d;">
+                                        <span class="ignore-address">Willow Grove, PA 19010</span>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="dots" style="border-bottom: 1px dotted;" colspan="2">&nbsp;</td>
+                        </tr>
+                        <!-- Shipping Shipee & Payment Information -->
+                        <tr>
+                          <td valign="top" align="left" style="font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 200; line-height: 18px; font-size: 12px; padding-top: 19px">
+                            Fedex Ground, 5-7 Business Days
+                          </td>
+                          <td valign="top" align="right" style="padding-top: 19px; font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 200; line-height: 18px; font-size: 12px; border: 1px solid transparent;" width="50%">
+                            <table border="0" cellpadding="0" cellspacing="0" width="49%" valign="middle" align="right" style="border: 1px solid transparent; Margin-right: -11px;">
+                              <tr>
+                                <td valign="top" width="25%" style="min-width: 33px">
+                                  <img src="https://s3.amazonaws.com/modesto-emails/visa-logo.png" alt="Visa" style="display: block; line-height: 20px;" border="0" width="33" />
+                                </td>
+                                <td valign="top" style="padding-left: 15px;" valign="top" width="75%">
+                                  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                    <tr>
+                                      <td style="font-size: 8px; font-weight: normal; line-height: 9px;">
+                                        Riley Mendoza
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td style="font-size: 8px; font-weight: normal; line-height: 8px; padding-top: 2px;">
+                                        Visa ending in 1234
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!--[if (gte mso 9)|(IE)>
+        </td>
+      </tr>
+    </table>
+    <![endif]-->
+
+    <!-- Start of New Component Module Module -->
+    <!--[if (gte mso 9)|(IE)>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="600">
+      <tr>
+        <td>
+          <![endif]-->
+          <!-- New Component Core Container -->
+          <table align="center" width="100%" cellspacing="0" cellpadding="0" style="table-layout: fixed;">
+            <tr>
+              <td align="center" class="background-container" bgcolor="#f2f2f2" style="padding: 0 36px 0 36px;">
+                <!-- New Component Inner Content Container -->
+                <table align="center" class="content-container" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px; min-width: 600px;" >
+                  <tr>
+                    <td bgcolor="#ffffff" style="color: #2e2e2e; border: 2px solid #e8e8e8; padding: 40px 0 40px 0">
+                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                        <tr>
+                          <td>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="padding: 0 36px 0 36px">
+                              <tr>
+                                <td class="subheadline" style="font-size:  22px; font-style: normal; font-weight: 200; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 26px;" align="center">
+                                  Enjoy Your Phone Faster
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <tr>
+                            <td style="padding: 0 72px 0 72px" class="primary-content-wrapper">
+                              <table border="0" cellpadding="0" cellspacing="0" width="100%" >
+                                <tr>
+                                  <td  class="paragraph-copy" style="padding-top: 30px; font-size: 12px; line-height: 18px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-style: normal;" align="center">
+                                    If you're transferring your number, you can prep by entering your current carrier details now. Then when your new phone comes, you'll be one step closer to activation.
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="padding-top: 30px;" align="center">
+                                    <div>
+                                      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                          <td align="center">
+                                            <table border="0" cellpadding="0" cellspacing="0" width="155">
+                                              <tr>
+                                                <td bgcolor="#00a3e0"  style="padding: 10px 20px 10px 20px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; border:1px solid #00a3e0; color: #ffffff;" align="center">
+                                                  <a href="#" target="_blank" style="font-size: 12px; font-family: 'XFinitySans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 400; text-decoration: none; display: inline-block; "><span style="color: #FFFFFF">Get Started</span></a>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding-top: 30px; padding-bottom: 36px;" class="primary-content-wrapper" align="center">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" class="content-container" width="100%" style="min-width: 600px; max-width: 600px; ">
+                          <tr>
+                            <td style="font-weight: 200; font-size: 14px; font-style: normal; line-height: 18px; color: #2e2e2e; text-align: center;" align="center">
+                              Questions?
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-weight: 200; font-size: 12px; font-style: normal; line-height: 18px; color: #2E2E2E; " align="center">
+                              <span style="color: #2E2E2E;">Email Us:</span> <a href="mailto:xfinitymobile@comcast.net" style="font-weight: 200; text-decoration: none; color: #2B9CD8;"><span style="color: #2B9CD8;">xfinitymobile@comcast.net</span></a> <span style="color: #2e2e2e !important;">or</span> <a href="#foo" style="font-weight: 200; text-decoration: none; color: #2B9CD8;"><span style="color: #2B9CD8;">Chat Live</span></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-weight: 200; font-size: 12px; font-style: normal; line-height: 18px;" align="center">
+                              <span class="footer-span" ><span style="color: #2e2e2e;">XFinity Mobile:</span> <a href="#" style="font-weight: 200; text-decoration: none; color: #2B9CD8;"><span style="color: #2B9CD8;">Terms & Conditions</span></a></span>
+                              <span class="footer-span" ><span style="color: #2e2e2e !important;">EIP:</span>
+                                <a href="#" style="font-weight: 200;  text-decoration: none; "><span style="color: #2B9CD8;">Terms & Conditions</span></a></span>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->
+    </body>
+  </html>
